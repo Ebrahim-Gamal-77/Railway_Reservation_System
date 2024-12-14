@@ -4,8 +4,8 @@
 ## I just used underline _ before each word or statement.
 # Important Notes:
 ## 1: Every project has its Repo.
-2: Every Branch for every enhancment or feature.
-3: No need connection to your remote when working.
+## 2: Every Branch for every enhancment or feature.
+## 3: No need connection to your remote when working.
 ## Anyone can Push or pull depends or permissions.
 ## Clone (from Local or Remote)
 ## Push: from your local to Remote
