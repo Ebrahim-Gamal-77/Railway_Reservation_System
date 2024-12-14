@@ -1,11 +1,11 @@
-# Railway System
+# Railway Management System
 ## This will be our first project using Distributed Version control system GitHub.
 ### When I want to say that there is something is important ==> This text is _extremely_ important 
 ## I just used underline _ before each word or statement.
 # Important Notes:
-## Every project has its Repo.
-## Every Branch for every enhancment or feature.
-## No need connection to your remote when working.
+## 1: Every project has its Repo.
+2: Every Branch for every enhancment or feature.
+3: No need connection to your remote when working.
 ## Anyone can Push or pull depends or permissions.
 ## Clone (from Local or Remote)
 ## Push: from your local to Remote
