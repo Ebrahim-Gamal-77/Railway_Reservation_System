@@ -1,0 +1,3 @@
+C:/Users/majok/Railway_Reservation_System/cmake-build-debug/CMakeFiles/Railway_Reservation_System.dir
+C:/Users/majok/Railway_Reservation_System/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/majok/Railway_Reservation_System/cmake-build-debug/CMakeFiles/rebuild_cache.dir
