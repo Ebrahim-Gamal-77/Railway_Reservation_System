@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <array>
 #include <vector>
 #include <string>
@@ -15,6 +15,7 @@ class Coach {
 
 	int Available_Seats{ 30 }; // Initially 30.
 public:
+
 	Coach() :id(0) {}
 
 	Coach(long long ID, int num_of_Available_Seat, int num_of_Reserved_Seat);
@@ -81,14 +82,16 @@ void Coach::Reserve_Seat()
 
 		} while (seat_num > 30 || seat_num < 1);
 
-		if (Seats[seat_num - 1])
+		// 0 based index
+
+		if (Seats[seat_num - 1]) // 1
 		{
 			cout << "\nSeat already booked. Please choose another seat.\n";
 			Reserve_Seat(); // Recursive call.
 		}
-		else
+		else  // 0 
 		{
-
+			// 30
 			Seats[seat_num - 1] = true;
 
 			Available_Seats--;
@@ -105,10 +108,13 @@ class Train
 
 	vector<Coach>Coachs_of_train; // Composition: train has a 10 coach.
 
-public:
-	Train():Coachs_of_train(10) {}
+	//Coach Coachs_of_train[10];
 
-	Train(long long ID) : Id(ID) {}
+public:
+
+	Train():Coachs_of_train(10) {} // Default const  train has a 10 coach.
+
+	Train(long long ID) : Id(ID)  {}
 
 	void Class_Levels();
 };
@@ -129,30 +135,33 @@ void Train::Class_Levels()
 	} while (type != "1A" && type != "1a" && type != "2A" && type != "2a" &&
 		type != "3a" && type != "3A" && type != "CC" && type != "cc" && type != "Cc");
 
-	if (type == "1A" || type == "1a")
+	//				======= 
+
+	if ( type == "1A" || type == "1a" )
 	{
 		Coachs_of_train[0].Set_id(301);
 		cout << Coachs_of_train[0];
 		Coachs_of_train[0].Reserve_Seat();
 	}
-	else if (type == "2A" || type == "2a")
+	else if ( type == "2A" || type == "2a" )
 	{
 		Coachs_of_train[1].Set_id(302);
 		cout << Coachs_of_train[1];
 		Coachs_of_train[1].Reserve_Seat();
 	}
-	else if (type == "3A" || type == "3a")
+	else if ( type == "3A" || type == "3a" )
 	{
 		Coachs_of_train[2].Set_id(303);
 		cout << Coachs_of_train[2];
 		Coachs_of_train[2].Reserve_Seat();
 	}
-	else
+	else 
 	{
 		Coachs_of_train[3].Set_id(304);
 		cout << Coachs_of_train[3];
 		Coachs_of_train[3].Reserve_Seat();
 	}
+
 }
 
 struct Train_node
@@ -162,17 +171,24 @@ struct Train_node
 	Train_node() {} //Default Constructor.
 };
 
-
 class admin
 {
-	int Platform{ };
+	int Platform { }; 
 	string Depart, Destination;
 	Train_node* head { }; // points to nullptr.
-	int Num_of_stops{ };
-	string Train_Status;// Delayed_Canceled_Ontime.
+	int Num_of_stops { } ;
+	string Train_Status;// Delayed_Canceled _ Ontime.
+
 public:
 	void Consol();
+	admin() { // Error solved
+		head = new Train_node;
+	} // Default constructor.
+	~admin()
 
+	{
+		delete(head);
+	}
 };
 void admin::Consol()
 {
