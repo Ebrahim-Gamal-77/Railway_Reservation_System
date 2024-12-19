@@ -131,6 +131,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Person.h" />
+    <ClInclude Include="Route.h" />
+    <ClInclude Include="Schedule.h" />
+    <ClInclude Include="Station.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
