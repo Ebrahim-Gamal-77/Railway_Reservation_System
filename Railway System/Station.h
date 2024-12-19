@@ -55,7 +55,7 @@ void Station::show_stations_details()
 	cout << "==============================\n";
 	for (auto it : stations) {
 		it->station_details();
-		schedule::search_for_schedule(it->stationName);
+		Schedule::search_for_schedule(it->stationName);
 
 	}
 }
@@ -143,7 +143,7 @@ void Station::display_station_schedules(string name)
 	for (auto it : stations) {
 		if (it->stationName == name && it->underMaintenance == 1) {
 
-			schedule::search_for_schedule(it->stationName);
+			Schedule::search_for_schedule(it->stationName);
 			return;
 		}
 	}
@@ -209,7 +209,7 @@ void Station::manage_stations()
 				break;
 			}
 			case 4:
-				schedule::send_resolution();
+				Schedule::send_resolution();
 				break;
 			case 5: {
 				cout << "Enter the name of the id of station you want to stop" << endl;
